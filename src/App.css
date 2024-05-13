@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* CUSTOM SELECT */
+/* select */
+  .form-selects {
+    position: relative;
+    min-width: 210px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .form-selects:hover .form-options {
+    opacity: 1;
+    visibility: visible;
   }
-  to {
-    transform: rotate(360deg);
+
+  .form-selects .select {
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
   }
-}
+
+  .form-select {
+    padding: 10px 20px;
+    border-radius: 4px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: #fff;
+    gap: 5px;
+  }
+
+  .form-options {
+    border-radius: 4px;
+    background-color: #fff;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s linear, visibility 0.2s linear;
+    box-shadow: 0px 10px 24px 0px rgba(4, 23, 118, 0.3);
+    z-index: 30;
+    max-height: 280px;
+    /* min-width: 200px; */
+    overflow-y: scroll;
+  }
+
+  .form-options .option {
+    padding: 10px 20px;
+    color: #000;
+    cursor: pointer;
+  }
+
+  .form-options .option:hover {
+    background-color: #0417764d;
+    color: #fff;
+  }
